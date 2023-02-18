@@ -1,0 +1,12 @@
+.Cart__css{
+    background-color: rgb(253, 253, 253);
+    width: 600px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgb(212, 210, 210);
+    margin: 15px;
+    padding: 10px;
+}
+.Cart__title{
+    font-weight: bold;
+}
