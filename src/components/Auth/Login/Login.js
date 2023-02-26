@@ -1,8 +1,8 @@
 import React, { Fragment, useRef, useState } from "react";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Toast from "../../UI/Toast";
 const Login = (props) => {
-    //const navigate = useNavigate("");
+    const navigate = useNavigate("");
     const userName = useRef("");
     const password = useRef("");
     const [isLogin, setIsLogin] = useState(false);
@@ -16,6 +16,7 @@ const Login = (props) => {
         console.log(dataLogin);
         props.onGetPropsLogin(dataLogin);
     }
+
     const message = "success login";
     return (
         <Fragment>
@@ -38,7 +39,7 @@ const Login = (props) => {
                         className="bg-cyan-500 shadow-lg shadow-cyan-500/50 ... px-5 py-2 rounded-md text-[white]"
                         onClick={() => {
                             setIsLogin(true);
-                            /*navigate("/");*/
+                            navigate("/");
                         }}
                     >
                         Login

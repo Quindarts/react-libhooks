@@ -9,6 +9,14 @@ export const DashboardTemplate = () => {
         <Fragment>
             <div className="col-2 bg-slate-100">
                 <Sidebar />
+                <button
+                    onClick={() => {
+                        sessionStorage.removeItem("accessToken");
+                        location.reload();
+                    }}
+                >
+                    Logout
+                </button>
             </div>
             <HeaderTemplate />
             <div className="flex ">
