@@ -6,15 +6,14 @@ const Login = (props) => {
     const userName = useRef("");
     const password = useRef("");
     const [isLogin, setIsLogin] = useState(false);
-    console.log(document.querySelector("form"));
     function HandleSubmitLogin(event) {
         event.preventDefault();
         const dataLogin = {
             username: userName.current.value,
             password: password.current.value,
         };
-        console.log(dataLogin);
-        props.onGetPropsLogin(dataLogin);
+        console.log(props.onGetPropsLogin(dataLogin));
+        props.onGetPropsLogin(dataLogin) ? {} : setIsLogin(true);
     }
 
     const message = "success login";
@@ -38,7 +37,6 @@ const Login = (props) => {
                         type="submit"
                         className="bg-cyan-500 shadow-lg shadow-cyan-500/50 ... px-5 py-2 rounded-md text-[white]"
                         onClick={() => {
-                            setIsLogin(true);
                             navigate("/");
                         }}
                     >

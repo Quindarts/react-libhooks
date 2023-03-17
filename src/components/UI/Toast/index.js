@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 const Toast = (props) => {
     const prop = props.props;
-    console.log(props);
     return (
         <Fragment>
             <div className="posit">

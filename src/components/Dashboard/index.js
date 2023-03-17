@@ -2,13 +2,11 @@ import React, { Fragment } from "react";
 import CartTemplate from "../Cart";
 import FormCreateCartTemplate from "../CreateCart";
 import HeaderTemplate from "../Header";
-import Sidebar from "../Sidebar";
 
 export const DashboardTemplate = () => {
     return (
         <Fragment>
             <div className="col-2 bg-slate-100">
-                <Sidebar />
                 <button
                     onClick={() => {
                         sessionStorage.removeItem("accessToken");
